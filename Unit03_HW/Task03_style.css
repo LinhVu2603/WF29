@@ -1,0 +1,139 @@
+#background{
+	width: 100%;
+	height: 1650px;
+	background-image: url(../image/tuyet.jpg);
+	}
+
+#form{
+	width: 80%;
+	height: 1650px;
+	margin: auto;
+	border: solid 5px white ;
+	background-color: white;
+}
+#header{
+	width: 100%;
+	height: 500px;
+	background-image: url("../image/123.jpg");
+	background-size: cover;
+}
+#tr1{
+	background-repeat: repeat-x;
+}
+.td{
+	color: orange;
+}
+#left{
+	width: 16%;
+	height: 1000px;
+	display: inline-block;
+	float: left;
+}
+#box{
+	width: 100%;
+	height: 170px;
+	border: solid 1.5px; 
+	border-color: "#8c8c8c";
+	padding: 10px;
+	margin-bottom: 10px;
+}
+#box5{
+	width: 100%;
+	height: 200px;
+	border: solid 1.5px; 
+	border-color: "#8c8c8c";
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.danh_muc{
+	width: 100%;
+	height: 25px;
+	margin-top: 10px;
+}
+.danh_muc_chinh{
+	 background-image: url(../image/menu_bar.gif);
+	 background-size: cover;
+	 color: white;
+}
+.danh_muc_chinh:hover{
+	color: orange;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	color: orange;
+}
+#right{
+	float: right;	
+}
+#main{
+	width: 58%;
+	height: 1000px;
+	float: left;
+	display: inline-block;
+	margin-left: 40px;
+	text-indent: 20px;
+}
+#right{
+	width: 18%;
+	height: 1000px;
+	display: inline-block;
+	margin-left: 0;
+	padding-right: 0;
+}
+#main1{
+	width: 100%;
+	height: 70px;
+	background-color: orange;
+	padding-left: 10px;
+	border-radius: 10px;
+}
+.bar_left{
+	width: 100%;
+	height: 30px;
+	background-image: url(../image/main_bar_left.gif);
+	background-position: center center;
+	background-size: cover;
+	margin-top: 30px;
+	margin-right: 0;
+
+}
+.bar_right{
+	width: 100%;
+	height: 30px;
+	background-image: url(../image/main_bar_right.gif);
+	background-position: center center;
+	background-size: cover;
+	margin-top: 20px;
+}
+#box_right{
+	width: 100%;
+	height: 160px;
+	border: solid 1.5px; 
+	border-color: "#8c8c8c";
+	margin-right: 50px;
+	margin-bottom: 10px;
+}
+#box_right5{
+	width: 100%;
+	height: 250px;
+	border: solid 1.5px; 
+	border-color: "#8c8c8c";
+	margin-right: 50px;
+	margin-bottom: 10px;
+}
+#footer{
+	width: 100%;
+	height: 100px;
+	background-image: url(../image/123.jpg);
+	background-size: cover;
+	margin-top: 1000px;
+	color: orange;
+	text-align: center;
+}
+p{
+	color: white;
+	padding-top: 5px;
+}
