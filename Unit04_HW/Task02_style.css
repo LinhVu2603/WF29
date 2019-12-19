@@ -1,0 +1,138 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#menu{
+	width: 100%;
+	height: 40px;
+	background: green;
+}
+#menu>ul>li{
+    float: left;
+    list-style: none;
+    border-left: 1px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 40px;
+    position: relative;
+}
+#menu>ul>li a{
+    text-decoration: none;
+    color: white;
+}
+#menu>ul>li:hover{
+    background: white;
+    cursor: pointer;
+}
+#menu>ul>li:hover  a{
+    color: green;
+}
+#menu{
+	position: relative;
+}
+#search{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	font-size: 35px;
+	color: white;
+}
+#menu>ul>li:hover #submenu{
+    display: block;
+}
+#menu>ul>li:hover #submenu li a{
+    color: white;
+}
+#submenu{
+    position: absolute;
+    width: 100px;
+    top:40px;
+    left: 0;
+    display: none;
+}
+#submenu>li{
+    list-style: none;
+	border-left: 1px solid white;
+    border-left: 1px solid white;
+    padding: 5px;
+    line-height: 40px;
+    border-bottom: 1px solid white;
+    background-color: green;
+    clear: left;
+}
+#submenu li:hover{
+    background: white !important;
+}
+#submenu li:hover  a{
+    color:green !important;
+}
+.sub{
+	width: 150px;
+	height: 30px;
+}
+#menu>ul>li:hover #submenu1{
+    display: block;
+}
+#menu>ul>li:hover #submenu1 li a{
+    color: white;
+}
+#submenu1{
+    position: absolute;
+    width: 100px;
+    top:40px;
+    left: 0;
+    display: none;
+}
+#submenu1>li{
+    list-style: none;
+	border-left: 1px solid white;
+    padding: 5px;
+    line-height: 40px;
+    border-bottom: 1px solid white;
+    background-color: green;
+    clear: left;
+}
+#submenu1 li:hover{
+    background: white !important;
+}
+#submenu1 li:hover  a{
+    color:green !important;
+}
+.sub1{
+	width: 200px;
+	height: 30px;
+}
+#submenu1>li:hover #submenu2{
+	display: block;
+}
+#submenu1>li:hover #submenu2>li a{
+	color: white ;
+}
+#submenu2{
+	position: absolute;
+	width: 200px;
+	top: 40px;
+	left: 210px;
+	display: none;
+}
+#submenu2{
+	list-style: none;
+	border-left: 1px solid green;
+	padding: 5px;
+	line-height: 40px;
+	border-bottom: 1px solid white;
+	background-color: green;	
+	clear: left;
+}
+#submenu2>li:hover{
+	background: white !important;
+}
+#submenu2>li:hover a{
+	color: green !important; 
+}
+.sub2{
+	width: 200px;
+	height: 30px;
+}
