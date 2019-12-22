@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 2000px;
+	background-color: white;
+}
+#header{
+	width: 100%;
+	height: 140px;
+	position: absolute;
+}
+#menu1{
+	width: 90%;
+	height:40px;
+	position: absolute;
+	left: 5%;
+}
+#menu2{
+	width: 90%;
+	height: 100px;
+	position: absolute;
+	left: 5%;
+	top: 40px;
+	z-index: 1;
+}
+#bgmenu2{
+	width: 100%;
+	height: 99px;
+	background-color: red;
+	position: relative;
+	top: 40px;
+	z-index: 0;
+	border: none;
+}
+#menu1>ul>li a{
+	text-decoration: none;
+	color: black;
+}
+#menu1>ul>li{
+	list-style: none;
+	display: block;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 40px;
+	border-left: 1px solid grey;
+}
+#menu2 p{
+	font-size: 48px;
+	color: white;
+	font-family: 'Merriweather', serif;
+}
+#menu2>ul>li{
+	list-style: none;
+	display: block;
+	float: left;
+	line-height: 35px;
+	border-left: 1px solid grey;
+}
+#menu2>ul>li a{
+	text-decoration: none;
+	color: white;
+		padding-left: 10px;
+	padding-right: 10px;
+}
+#liBBC{
+	border-left-color: white!important;
+	padding-left: 5px !important;
+}
+#liBBC>div{
+	width: 80px;
+	height: 22px;
+	position: relative;
+	top: 9px;
+	background-image: url(image/blq-orbit-blocks_grey_alpha.png);
+	background-size: cover;
+}
+#liSignin{
+	width: 120px;
+	padding-left: 10px !important;
+}
+#liMore>a div{
+	width: 10px;
+	height: 10px;	
+	position: relative;
+	right: 10px;
+}
+#menu2>ul div+li{
+	border-left: none !important;;
+}
+#main>div{
+	width: 90%;
+	height: 1000px;
+	position: relative;
+	left: 5%;
+	top: 140px;
+	background-color: white;
+}
+#menu2>ul>li div{
+	width: 100%;
+	height: 5px;
+	background-color: white;
+	padding: 0 !important;
+}
+#main1{
+	width: 100%;
+	height: 
+}
+#l1{
+	width: 18%;
+	height: 300px;
+	padding: 5px;
+	display: inline-block;
+	float: left;
+}
+#l1>ul>li{
+	list-style: none;
+	display: block;
+	float: left;
+	padding left: 10px;
+	padding right: 10px;
+	line-height: 20px;
+	border-right: 1px solid grey;
+}
+#l1>ul>li+li{
+	border-right: none !important;
+}
+#m1{
+	width: 35%;
+	height: 300px;
+	display: inline-block;
+	float: left;	
+	padding: 5px;
+}
+#img1{
+	width: 100%;
+	height: 250px;
+	background-image: url(image/_108347373_mediaitem108347372.jpg);
+	background-size: cover;
+}
+#m1>ul>li{
+	display: block;
+	float: left;
+}	
