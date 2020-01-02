@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task04</title>
+</head>
+<body>
+	<script language="javascript">
+		var n = prompt('Mời nhập vào số nguyên N: ', '');
+		var m = prompt('Mời nhập vào số nguyên M: ', '');
+		var k = prompt('Mời nhập vào số nguyên K', '');
+		var sum = 0;
+		if (n<=m) {
+			for (var i = n+1; i < m; i++) {
+				if (i%k==0) {
+					sum = sum+1;
+				}
+			}
+		}else {
+			document.write('Số N nhập vào phải nhỏ hơn hoặc bằng số M.');
+		}
+		document.write("Tổng các số chia hết cho K trong khoảng từ N đến M là "+ sum);
+	</script>
+</body>
+</html>
