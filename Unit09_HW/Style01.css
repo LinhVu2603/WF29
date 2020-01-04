@@ -1,0 +1,45 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-image: url(image/hinh-nen-slide-dep-1_023215040.png);
+	background-size: cover;
+}
+body>div{
+	width: 90%;
+	height: 500px;
+	margin: 5%;
+}
+.mainTab{
+	width: 7%;
+	height: 40px;
+	background-color: #cca4b7;
+	margin-right: 10px;
+	float: left;
+}
+.mainP{
+	color: white;
+	font-size: 24px;
+	text-align: center;
+	padding-top: 5%;
+}
+.childTab{
+	width: 70%;
+	height: 200px;
+	float: none;
+	margin-top: 40px;
+	position: absolute;
+}
+.childP{
+	color: black;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 20px;
+}
+.ctent{
+	color: #808080;
+	font-size: 18px;
+	padding-left: 20px;
+}
