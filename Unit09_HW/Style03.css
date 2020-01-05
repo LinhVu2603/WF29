@@ -2,3 +2,14 @@
 	margin: 0px;
 	padding: 0px;
 }
+#form{
+	width: 70%;
+	margin: 0 auto;
+}
+#btn{
+	width: 50%;
+	border: 1px solid black;
+}
+.text{
+	font-size: 100%;
+}

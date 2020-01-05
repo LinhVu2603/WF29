@@ -2,3 +2,18 @@
 	margin: 0px;
 	padding: 0px;
 }
+#checkBoard{
+	width: 80%;
+	background-color: grey;
+	margin: 10%;
+}
+.CheckLine{
+	height: 50px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	border: 1px solid black;
+}
+.CheckLine input{
+	margin: 15px;
+	border:1px solid black;
+}

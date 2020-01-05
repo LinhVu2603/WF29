@@ -3,8 +3,42 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Task03</title>
+	<link rel="stylesheet" href="Style03.css">
+	<script>
+		var count = 0; 
+
+		function dfault() {
+		for(var i = 0; i< document.getElementsByClassName('text').length; i++) {
+				document.getElementsByClassName('text')[i].style.fontSize="100%";
+			}
+		}
+
+		function bigText() {
+			for(var i = 0; i< document.getElementsByClassName('text').length; i++) {
+
+				count += 40;
+				document.getElementsByClassName('text')[i].style.fontSize=(count + 100) + "%";
+			}
+		}
+
+		function smallText() {
+			for(var i = 0; i< document.getElementsByClassName('text').length; i++) {
+
+				count -= 40;
+				document.getElementsByClassName('text')[i].style.fontSize=(count + 100) + "%";
+			}
+		}
+	</script>
 </head>
 <body>
-	
+	<div id="form">
+		<div id="btn">
+			<p class="text">Cỡ chữ</p>
+			<button onclick="dfault()" type="button">Mặc định</button>
+			<button onclick="bigText()" id="bigText">Chữ lớn</button>
+			<button onclick="smallText()">Chữ nhỏ</button>
+		</div>
+		<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque corporis aspernatur odio placeat cumque facere? Voluptates earum, esse, perferendis, fugit quibusdam cupiditate odio tempora adipisci id voluptatum ipsum natus, minima deserunt delectus nam! Quae dolores, magni aperiam fugit recusandae in.</p>
+	</div>
 </body>
 </html>

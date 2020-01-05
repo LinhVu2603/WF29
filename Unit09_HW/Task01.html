@@ -8,76 +8,110 @@
 </head>
 <body>
 	<div>
-		<div class="mainTab">
+		<div class="mainTab" id="mTab1" onclick="showTab1(this)">
 			<p class="mainP">Tab 1</p>
 		</div>
-		<div class="mainTab">
+		<div class="mainTab" id="mTab2" onclick="showTab2(this)">
 			<p class="mainP">Tab 2</p>
 		</div>
-		<div class="mainTab">
+		<div class="mainTab" id="mTab3" onclick="showTab3(this)">
 			<p class="mainP">Tab 3</p>
 		</div>
-		<div class="childTab">
-			<p class="childP"></p>
-			<p class="ctent"></p>
+		<div class="childTab" id="cTab1">
+			<p class="childP">Section1</p>
+			<p class="ctent">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora accusantium laudantium debitis, nobis officiis sit est, nulla modi consequuntur assumenda?</p>
 		</div>
-		<div class="childTab">
-			<p class="childP"></p>
-			<p class="ctent"></p>
+		<div class="childTab" id="cTab2">
+			<p class="childP">Section2</p>
+			<p class="ctent">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eligendi repellat placeat adipisci, commodi soluta dolor eaque sed temporibus tenetur quam ratione ullam molestias necessitatibus hic, non quo eius quaerat!</p>
 		</div>
-		<div class="childTab">
-			<p class="childP"></p>
-			<p class="ctent"></p>
+		<div class="childTab" id="cTab3">
+			<p class="childP">Section3</p>
+			<p class="ctent">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo laboriosam, facere fuga alias voluptas, quis labore perferendis cumque a dolor ut pariatur. Corrupti, dolorum vero.</p>
 		</div>
 	</div>	
 	<script language="javascript">
-		var mainTab = document.getElementsByClassName('mainTab');
-		var thep = document.getElementsByClassName('mainP');
-		var childTab = document.getElementsByClassName('childTab');
-		var childP = document.getElementsByClassName('childP');
-		var ctent = document.getElementsByClassName('ctent');
-		function showChildTab0() {
-			mainTab[0].style.background = '#d9c2c9';
-			thep[0].style.color = 'black';
-			childTab[0].style.background = '#d9c2c9';
-			childP[0].innerHTML = "Section1";
-			ctent[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora accusantium laudantium debitis, nobis officiis sit est, nulla modi consequuntur assumenda?";
-		}
-		// function showChildTab1() {
+		function showTab1(x) {
+				document.getElementById('cTab1').style.display="block";
+				document.getElementById('cTab2').style.display="none";
+				document.getElementById('cTab3').style.display="none";
+				document.getElementById('mTab2').style.background="";
+				document.getElementById('mTab3').style.background="";
+				document.getElementById('mTab2').style.color="#d9c2c9";
+				document.getElementById('mTab3').style.color="#d9c2c9"
+				x.style.background="#d9c2c9";
+				x.style.color="white";
+			}
+
+		function showTab2(x) {
+				document.getElementById('cTab1').style.display="none";
+				document.getElementById('cTab2').style.display="block";
+				document.getElementById('cTab3').style.display="none";
+				document.getElementById('mTab1').style.background="";
+				document.getElementById('mTab3').style.background="";
+				document.getElementById('mTab2').style.color="#d9c2c9";
+				document.getElementById('mTab3').style.color="#d9c2c9"
+				x.style.background="#d9c2c9";
+				x.style.color="white";
+			}
+		function showTab3(x) {
+				document.getElementById('cTab1').style.display="none";
+				document.getElementById('cTab2').style.display="none";
+				document.getElementById('cTab3').style.display="block";
+				document.getElementById('mTab2').style.background="";
+				document.getElementById('mTab1').style.background="";
+				document.getElementById('mTab2').style.color="#d9c2c9";
+				document.getElementById('mTab3').style.color="#d9c2c9"
+				x.style.background="#d9c2c9";
+				x.style.color="white";
+			}
+		// var mainTab = document.getElementsByClassName('mainTab');
+		// var thep = document.getElementsByClassName('mainP');
+		// var childTab = document.getElementsByClassName('childTab');
+		// var childP = document.getElementsByClassName('childP');
+		// var ctent = document.getElementsByClassName('ctent');
+		// function showChildTab0() {
+		// 	mainTab[0].style.background = '#d9c2c9';
+		// 	thep[0].style.color = 'black';
+		// 	childTab[0].style.background = '#d9c2c9';
+		// 	childP[0].innerHTML = "Section1";
+		// 	ctent[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora accusantium laudantium debitis, nobis officiis sit est, nulla modi consequuntur assumenda?";
+		// }
+		// // function showChildTab1() {
+		// // 	mainTab[0].style.background = '#cca4b7';
+		// // 	thep[0].style.color = 'white';
+		// // 	childTab[0].style.background = '#ece9de';
+		// // 	childP[0].innerHTML = "";
+		// // 	ctent[0].innerHTML = "";
+		// // 	mainTab[1].style.background = '#d9c2c9';
+		// // 	thep[1].style.color = 'black';
+		// // 	childTab[1].style.background = '#d9c2c9';
+		// // 	childP[1].innerHTML = "Section1";
+		// // 	ctent[1].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora accusantium laudantium debitis, nobis officiis sit est, nulla modi consequuntur assumenda?";
+		// // }
+		// // function showChildTab2() {
+		// // 	mainTab[1].style.background = '#cca4b7';
+		// // 	thep[1].style.color = 'white';
+		// // 	childTab[1].style.background = '#ece9de';
+		// // 	childP[1].innerHTML = "";
+		// // 	ctent[1].innerHTML = "";
+		// // 	mainTab[2].style.background = '#d9c2c9';
+		// // 	thep[2].style.color = 'black';
+		// // 	childTab[2].style.background = '#d9c2c9';
+		// // 	childP[2].innerHTML = "Section1";
+		// // 	ctent[2].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora accusantium laudantium debitis, nobis officiis sit est, nulla modi consequuntur assumenda?";
+		// // }	
+		// function hideChildTab0(){
 		// 	mainTab[0].style.background = '#cca4b7';
 		// 	thep[0].style.color = 'white';
 		// 	childTab[0].style.background = '#ece9de';
 		// 	childP[0].innerHTML = "";
 		// 	ctent[0].innerHTML = "";
-		// 	mainTab[1].style.background = '#d9c2c9';
-		// 	thep[1].style.color = 'black';
-		// 	childTab[1].style.background = '#d9c2c9';
-		// 	childP[1].innerHTML = "Section1";
-		// 	ctent[1].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora accusantium laudantium debitis, nobis officiis sit est, nulla modi consequuntur assumenda?";
 		// }
-		// function showChildTab2() {
-		// 	mainTab[1].style.background = '#cca4b7';
-		// 	thep[1].style.color = 'white';
-		// 	childTab[1].style.background = '#ece9de';
-		// 	childP[1].innerHTML = "";
-		// 	ctent[1].innerHTML = "";
-		// 	mainTab[2].style.background = '#d9c2c9';
-		// 	thep[2].style.color = 'black';
-		// 	childTab[2].style.background = '#d9c2c9';
-		// 	childP[2].innerHTML = "Section1";
-		// 	ctent[2].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora accusantium laudantium debitis, nobis officiis sit est, nulla modi consequuntur assumenda?";
-		// }	
-		function hideChildTab0(){
-			mainTab[0].style.background = '#cca4b7';
-			thep[0].style.color = 'white';
-			childTab[0].style.background = '#ece9de';
-			childP[0].innerHTML = "";
-			ctent[0].innerHTML = "";
-		}
-		mainTab[0].addEventListener('click',showChildTab0,false);	
-		// mainTab[1].addEventListener('click',showChildTab1,false);	
-		// mainTab[2].addEventListener('click',showChildTab2,false);	
-		mainTab[0].addEventListener('blur',hideChildTab0,false);	
+		// mainTab[0].addEventListener('click',showChildTab0,false);	
+		// // mainTab[1].addEventListener('click',showChildTab1,false);	
+		// // mainTab[2].addEventListener('click',showChildTab2,false);	
+		// mainTab[0].addEventListener('blur',hideChildTab0,false);	
 	</script>
 </body>
 </html>

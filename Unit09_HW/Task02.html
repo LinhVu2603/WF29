@@ -3,8 +3,67 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Task02</title>
+	<link rel="stylesheet" href="Style02.css">
+	<script>
+		function checkAll() {
+			for (var i = 0; i < document.querySelectorAll('form div input').length; i++) {
+				document.querySelectorAll('form div input')[i].checked=true;
+			}
+		}
+		function unCheckAll() {
+			for(var i = 0; i < document.querySelectorAll('form div input').length; i++) {
+				document.querySelectorAll('form div input')[i].checked=false;
+			}
+		}
+		function mouseOver(x) {
+			x.style.background="green";
+		}	
+
+		function mouseOut(x) {
+			x.style.background="";
+		}
+	</script>
 </head>
 <body>
-	
+	<div id="checkBoard">
+		<form action="">
+			<div class="CheckLine" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+				<input type="checkbox" name="check" id="check1">
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			</div>
+			<div class="CheckLine" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+				<input type="checkbox" name="check" id="check2">
+				<span>Golor sit amet, consectetur adipisicing elit.</span>
+			</div>
+			<div class="CheckLine" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+				<input type="checkbox" name="check" id="check3">
+				<span>Epsum dolor sit amet, consectetur adipisicing elit.</span>
+			</div>
+			<div class="CheckLine" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+				<input type="checkbox" name="check" id="check4">
+				<span>Lorolor sit amet, consectetur adipisicing elit.</span>
+			</div>
+			<div class="CheckLine" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+				<input type="checkbox" name="check" id="check5">
+				<span>Kit amet, consectetur adipisicing elit.</span>
+			</div>
+			<div class="CheckLine" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+				<input type="checkbox" name="check" id="check6">
+				<span>Olor sit amet, consectetur adipisicing elit.</span>
+			</div>
+			<div class="CheckLine" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+				<input type="checkbox" name="check" id="check7">
+				<span>Ksum dolor sit amet, consectetur adipisicing elit.</span>
+			</div>
+			<div class="CheckLine" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+				<input type="checkbox" name="check" id="check8">
+				<span>Hlor sit amet, consectetur adipisicing elit.</span>
+			</div>
+		</form>
+		<div>
+			<button onclick="checkAll()" id="checkAll">Check All</button>
+			<button onclick="unCheckAll()" id="unCheckAll">Uncheck All</button>
+		</div>
+	</div>
 </body>
 </html>
