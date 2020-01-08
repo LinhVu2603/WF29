@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<link rel="stylesheet" href="form1.css">
+</head>
+<body>
+	<div id="bground">
+		<div id="bgimage">
+			<div id="form">
+				<p style="font-size: 36px; color: #984a1c; font-weight: bold; text-align: center; padding-top: 5%;padding-bottom: 5%;">ACCOUNT  &nbsp&nbspLOGIN</p>
+				<form id="frm" name="frm" action="">
+					<div>
+						<div class="title">Họ và tên</div>
+						<input type="text" placeholder="Nhập họ và tên..." name="name"><span class="error"></span>
+					</div>
+					<div>
+						<div class="title">Giới tính</div>
+						<input type="radio" name="gender" style="width: 10%!important; height: 20px;">Nam<input type="radio" name="gender" style="width: 10%!important; height: 20px;">Nữ
+						<span id="gder" class="error"></span>
+					</div>
+					<div>
+						<div class="title">Email</div>
+						<input type="text" placeholder="Nhập email..." name="email"><span class="error"></span>
+					</div>
+					<div>
+						<div class="title">Số điện thoại</div>
+						<input type="text" placeholder="Nhập số điện thoại..." name="phone"><span class="error"></span>
+					</div>
+					<div>
+						<div class="title">Mật khẩu</div>
+						<input type="text" name="passWord"><span class="error"></span>
+					</div>
+					<div>
+						<div class="title">Xác nhận mật khẩu</div>
+						<input type="text" name="cfPWord"><span class="error"></span>
+					</div>
+					<button name="dangKy" value="">Đăng ký</button>
+					<button name="Xoa" value="">Xóa Trắng</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		function validateEmail(email) {
+  			var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  			return re.test(String(email).toLowerCase());
+		}
+		function validatePhone(phone) {
+			var reg = /^\d+$/;
+			return reg.test(String(phone));
+		}
+		var button = document.getElementsByTagName('button');
+		button[0].addEventListener('click', function(){
+			event.preventDefault();
+			var name = document.frm.name;
+			var gender = document.frm.gender;
+			var email = document.frm.email;
+			var phone = document.frm.phone;
+			var passWord = document.frm.passWord;
+			var cfPWord= document.frm.cfPWord;
+			var check = document.getElementById('gder');
+			var error = document.getElementsByClassName('error');
+			if (name.value == "") {
+				name.nextElementSibling.innerHTML  = "Nhập tên đầy đủ";
+				return;
+			} else if (name.value.length <= 8) {
+				name.nextElementSibling.innerHTML = "Tên phải > 8 ký tự.";
+				return;
+			} else {
+				name.nextElementSibling.innerHTML = "";
+			}
+            if ((gender[0].checked == false)&&(gender[1].checked == false)) {
+            	check.innerHTML = "Giới tính không được để trống";
+            	return;
+            } else{
+            	check.innerHTML = "";
+            }
+			if (email.value == "") {
+				email.nextElementSibling.innerHTML  = "Nhập email đầy đủ";
+				return;
+			} else if(!validateEmail(email.value)) {
+				email.nextElementSibling.innerHTML  = "Email phải đúng định dạng";
+				return;
+			} else {
+				email.nextElementSibling.innerHTML = "";
+			}
+			if (phone.value == "") {
+				phone.nextElementSibling.innerHTML  = "Nhập số điện thoại đầy đủ";
+				return;
+			}else if (!validatePhone(phone.value)) {
+				phone.nextElementSibling.innerHTML = "Số điện thoại không được chứa chữ cái hoặc ký tự đặc biệt.";
+				return;
+			}else if (phone.value.length != 10) {
+				phone.nextElementSibling.innerHTML = "Số điện thoại phải gồm 10 số.";
+				return;
+			} else {
+				phone.nextElementSibling.innerHTML = "";
+			}
+			if (passWord.value == "") {
+				passWord.nextElementSibling.innerHTML  = "Nhập mật khẩu đầy đủ";
+				return;
+			} else if (passWord.value.length < 8) {
+				passWord.nextElementSibling.innerHTML = "Mật khẩu phải > 8 ký tự.";
+				return;
+			} else {
+				passWord.nextElementSibling.innerHTML = "";
+			}
+			if (cfPWord.value != passWord.value) {
+				cfPWord.nextElementSibling.innerHTML  = "Mật khẩu xác nhận không đúng.";
+				return;
+			} else{
+				cfPWord.nextElementSibling.innerHTML  = "";
+			}
+			alert('Đăng ký thành công!');
+			document.getElementById('frm').reset();
+		})
+		button[1].addEventListener('click',function(){
+			document.getElementById('frm').reset();
+		})
+	</script>
+</body>
+</html>

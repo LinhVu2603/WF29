@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+}
+body>div {
+	width: 70%;
+	height: 600px;
+	position: absolute;
+	margin-left: 15%;
+	margin-top: 70px;
+	z-index: 0;
+}
+img{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+p{
+	font-size: 36px;
+	color: white;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+button{
+	width: 3%;
+	height: 50px;
+	z-index: 2;
+	color: white;
+	font-size: 36px;
+	background-color:#3d5877b3; 
+}
+.btn{
+	width: 2% !important;
+	height: 20px !important;
+	margin-top: 560px;
+}
