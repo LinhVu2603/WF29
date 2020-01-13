@@ -9,6 +9,12 @@
 <body>
 	<div id="bground">
 		<div id="bgcover">
+			<div id="head-form-panel">
+				<div id="account" class="tab">1. Account</div>
+				<div id="profile" class="tab">2. Profile</div>
+				<div id="warning" class="tab">3. Warning</div>
+				<div id="finish" class="tab">4. Finish</div>
+			</div>
 			<div id="form">
 				<p style="font-size: 36px; color: #984a1c; font-weight: bold; text-align: center; padding-top: 5%;padding-bottom: 5%;">ĐĂNG  &nbsp&nbspKÝ</p>
 				<form id="frm" name="frm" action="">
@@ -43,6 +49,12 @@
 			</div>
 		</div>
 	</div>
+	<!-- <script>
+		$(document).ready(function(){
+			$('#frm-account').show();
+			accountTab();
+		})
+	</script> -->
 	<script>
 		$(document).ready(function(){
 			function validateEmail(email){
