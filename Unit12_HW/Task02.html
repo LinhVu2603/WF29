@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task2</title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+		}
+		/*body{
+			width: 100%;
+		}*/
+		.small{
+			width:17%;
+			height: 200px;
+			display: block;
+			float: left;
+			margin-left: 30px;
+			z-index: 0;
+		}
+		.small>img{
+			width: 100%;
+			height: 200px;
+		}
+		#big{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: #1414148f;
+			display: none;
+			z-index: 1;
+			float:  none;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$('.small').each(function(){
+				$('#big').css({display:'block',});
+				$('#bigImg').parent().css({width:'80%',paddingTop:'5%',paddingLeft:'20%',});
+				$('#bigImg').parent().next().show();
+			})
+				$('.small').eq(1).on('click',function(){
+					$('#bigImg').attr({src:'j',})
+				})			
+			// function showImg(){
+			// 	$('#big').css({display:'block',});
+			// 	$('#bigImg').parent().css({width:'80%',paddingTop:'5%',paddingLeft:'20%',});
+			// 	$('#bigImg').parent().next().show();
+			// }
+			function outImg(){
+				$('i').on('click',function(){
+					$('#big').css({display:'none',});
+				})
+			}
+		})
+	</script>
+</head>
+<body>
+	<div id="big">
+		<i class="fa fa-times" aria-hidden="true" style="font-size: 24px; color: red; float: right; padding: 10px;"></i>
+		<div>
+			<img id="bigImg" src="" alt="">
+		</div>
+		<p></p>
+	</div>
+	<p style="color: blue; font-size: 32px; text-align: center;">Album ảnh trường cũ</p>
+	<div class="small"><img src="TPC/1.jpg" alt=""></div>
+	<div class="small"><img src="TPC/10.jpg" alt=""></div>
+	<div class="small"><img src="TPC/22.jpg" alt=""></div>
+	<div class="small"><img src="TPC/23.jpg" alt=""></div>
+	<div class="small"><img src="TPC/15.jpg" alt=""></div>
+	
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task03</title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#menu{
+			padding-left: 20px;
+		}
+		#menu>li{
+			color: white;
+			font-size: 22px;
+			display: inline-block;
+			padding-right: 20px;
+			padding-top: 10px;
+			cursor: pointer;
+			line-height: 40px;
+		}
+		#sub>li{
+			color: white;
+			font-size: 18px;
+			text-align: center;
+			list-style: none;
+			cursor: pointer;
+		}
+		#sub{
+			width: 200px;
+			position: absolute;
+			background-color: blue;
+			display: none;
+		}
+		#sub2>li{
+			color: white;
+			font-size: 18px;
+			text-align: center;
+			list-style: none;
+			cursor: pointer;
+		}
+		#sub2{
+			width: 250px;
+			position: absolute;
+			background-color: blue;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div style="width: 100%; height: 50px;background-color: blue;">
+		<ul id="menu">
+			<li>Home</li>
+			<li>Profile</li>
+			<li>
+				Services
+				<ul id="sub">
+					<li>Web design</li>
+					<li>Web developement</li>
+					<li>Logo and Print Design</li>
+					<li>
+					Batagor Enak Neh
+					</li>
+					<li>Something</li>
+				</ul>
+			</li>
+			<li>Portofolio</li>
+			<li>Pengen ke Arab</li>
+			<li>
+				Beasiswa S2 Go!! Goo!!
+				<ul id="sub2">
+					<li>Lokah</li>
+					<li>Traveling</li>
+				</ul>
+			</li>
+			<li>Hire me</li>
+		</ul>
+
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('#menu').children().eq(2).on('mouseenter',function(){
+				$('#menu').children().eq(2).css("background","orange");
+				$('#sub').css("display","block").slideDown();
+			})
+			$('#menu').children().eq(2).on('mouseout',function(){
+				$('#menu').children().eq(2).css("background","blue");
+				$('#sub').css("display","none").slideUp();
+			})
+
+			$('#menu').children().eq(5).on('mouseenter',function(){
+				$('#menu').children().eq(5).css("background","orange");
+				$('#sub2').css("display","block").slideDown();
+			})
+			$('#menu').children().eq(5).on('mouseleave',function(){
+				$('#menu').children().eq(5).css("background","blue");
+				$('#sub2').css("display","none").slideUp();
+			})
+
+			for (var i = 0; i < $('#sub').children().length; i++) {
+			$('#sub').children(i).on('mouseenter',function(){
+				$('#sub').children(i).css("background","orange");
+				$('#sub').css("display","block").slideDown();
+			})
+			}
+		})
+	</script>
+</body>
+</html>

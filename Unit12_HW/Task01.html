@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task01</title>
+	<link rel="stylesheet" href="Task01.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="jquery-3.4.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+	<div id="bar">
+		<ul>
+			<li><i class="fa fa-question-circle" aria-hidden="true"></i> &nbsp About</li>
+			<li> <i class="fa fa-usd" aria-hidden="true"></i> &nbsp Pricing</li>
+			<li> <i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp  Why go pro?</li>
+			<li id="sp1">
+				<p> <i class="fa fa-ticket" aria-hidden="true"></i> &nbsp Support</p>
+				<ul id="submenu1">
+					<li><i class="fa fa-book" aria-hidden="true"></i> &nbsp Docs</li>
+					<li> <i class="fa fa-question-circle-o" aria-hidden="true"></i> &nbsp FAQ</li>
+					<li><i class="fa fa-gift" aria-hidden="true"></i> &nbsp Donate</li>
+					<li> <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp Contact</li>
+				</ul>
+				</li>
+			<li> <i class="fa fa-user" aria-hidden="true"></i> &nbsp &nbsp Account</li>
+		</ul>
+	</div>	
+	<header id="head">
+		<div id="title" style="cursor: pointer;">
+			<p  class="p1">Wordpress Responsive Menu</p>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>About</li>
+				<li>Pricing</li>
+				<li>Why go pro?</li>
+				<li id="support">
+					<p>Support</p>
+					<ul id="submenu">
+						<li>Docs</li>
+						<li>FAQ</li>
+						<li>Donate</li>
+						<li>Contact</li>
+					</ul>
+				</li>
+				<li>Account</li>
+			</ul>
+			
+		</div>
+	</header>
+	<script>
+		$(document).ready(function(){
+			$('#support').children().on('click',function(){
+				$('#submenu').toggle();
+			})
+			$('#sp1').children().on('click',function(){
+				$('#submenu1').toggle();
+				$('#sp1').next().css({ paddingTop: '20%',});
+			})
+			$('#title').on('click',function(){
+				$('#bar').toggle();
+			})
+		})
+
+	</script>
+</body>
+</html>
